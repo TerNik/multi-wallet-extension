@@ -1,0 +1,6 @@
+[submodule "external/keplr-wallet"]
+	path = external/keplr-wallet
+	url = https://github.com/chainapsis/keplr-wallet.git
+[submodule "external/lace-wallet"]
+	path = external/lace-wallet
+	url = https://github.com/input-output-hk/lace.git

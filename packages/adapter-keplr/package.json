@@ -1,0 +1,10 @@
+{
+  "name": "@multi-wallet/adapter-keplr",
+  "version": "0.1.0",
+  "main": "src/KeplrAdapter.ts",
+  "types": "src/KeplrAdapter.ts",
+  "private": true,
+  "dependencies": {
+    "@multi-wallet/core": "workspace:*"
+  }
+}
