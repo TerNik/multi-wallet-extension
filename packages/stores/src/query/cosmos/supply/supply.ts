@@ -1,0 +1,54 @@
+import { SupplyTotal } from "./types";
+import { KVStore } from "@keplr-wallet/common";
+import {
+  ObservableChainQuery,
+  ObservableChainQueryMap,
+} from "../../chain-query";
+import { ChainGetter } from "../../../common";
+
+export class ObservableChainQuerySupplyTotal extends ObservableChainQuery<SupplyTotal> {
+  constructor(
+    kvStore: KVStore,
+    chainId: string,
+    chainGetter: ChainGetter,
+    denom: string
+  ) {
+    super(
+      kvStore,
+      chainId,
+      chainGetter,
+      `/cosmos/bank/v1beta1/supply/${denom}`
+    );
+  }
+}
+
+export class ObservableQuerySupplyTotal extends ObservableChainQueryMap<SupplyTotal> {
+  constructor(
+    protected override readonly kvStore: KVStore,
+    protected override readonly chainId: string,
+    protected override readonly chainGetter: ChainGetter
+  ) {
+    super(kvStore, chainId, chainGetter, (denom: string) => {
+      return new ObservableChainQuerySupplyTotal(
+        this.kvStore,
+        this.chainId,
+        this.chainGetter,
+        denom
+      );
+    });
+  }
+
+  getQueryDenom(denom: string): ObservableChainQuerySupplyTotal {
+    return this.get(denom);
+  }
+
+  // cosmos-sdk v0.46.0+ has changed the API to use query string.
+  getQueryDenomByQueryString(denom: string): ObservableChainQuerySupplyTotal {
+    return this.get(`by_denom?denom=${denom}`);
+  }
+
+  getQueryStakeDenom(): ObservableChainQuerySupplyTotal {
+    const chainInfo = this.chainGetter.getChain(this.chainId);
+    return this.get(chainInfo.stakeCurrency.coinMinimalDenom);
+  }
+}

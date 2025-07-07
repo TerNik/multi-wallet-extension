@@ -1,0 +1,75 @@
+@import "../../styles/var";
+
+*::-webkit-scrollbar {
+  width: 0px;
+  background: transparent !important;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000d3d;
+  background-image: url("../../public/assets/svg/wireframe/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.container-sidePanel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #030e3b;
+  background-size: cover;
+  background-image: url("../../public/assets/svg/wireframe/bg.svg");
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.innerContainer {
+  flex: 1;
+  margin: 10px 12px 16px 12px;
+  overflow-x: hidden;
+  padding-top: 64px;
+}
+
+.innerContainer-sidePanel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 10px 12px 16px 12px;
+  overflow-x: hidden;
+  padding-top: 64px;
+}
+
+.innerContainerWithMask {
+  flex: 1;
+  margin: 10px 12px 16px 12px;
+  overflow-x: hidden;
+  --mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 34%,
+      rgba(0, 0, 0, 1) 88%,
+      rgba(0, 0, 0, 0) 96%,
+      rgba(0, 0, 0, 0) 36%
+    )
+    100% 50% / 73% 108% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.BottomNav {
+  align-self: flex-end;
+}

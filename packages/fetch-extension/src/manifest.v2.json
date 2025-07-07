@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "ASI Alliance Wallet",
+  "description": "The official ASI Alliance Wallet for interacting with the ASI ledger",
+  "version": "0.20.0",
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup-loading.html",
+    "default_title": "ASI Alliance Wallet"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "permissions": ["storage", "notifications", "identity", "idle", "alarms"],
+  "content_security_policy": "script-src 'self' 'wasm-unsafe-eval' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["browser-polyfill.js", "contentScripts.bundle.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "injectedScript.bundle.js",
+    "assets/logo-256.svg",
+    "blocklist.html"
+  ]
+}

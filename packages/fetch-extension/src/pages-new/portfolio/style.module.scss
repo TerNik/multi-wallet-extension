@@ -1,0 +1,103 @@
+.title {
+  color: var(--grey-white, #fff);
+  font-family: Lexend;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.card {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  margin-bottom: 35px;
+}
+.heading {
+  font-family: Lexend;
+  margin-bottom: 24px;
+}
+.doughnut-graph {
+  display: block;
+  flex: 2;
+  height: 120px;
+  width: 240px;
+}
+
+.legend {
+  display: flex;
+  gap: 10px;
+}
+
+.legends {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.label {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Lexend;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.value {
+  color: #fff;
+  font-family: Lexend;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.claim-rewards-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 82px;
+    width: 82px;
+  }
+}
+
+.claim-rewards-dropdown-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.claim-rewards-dropdown-title {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 28.8px;
+}
+
+.claim-rewards-dropdown-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 28.8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.claim-rewards-reward {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 12px;
+  align-items: center;
+  border-radius: 12px;
+  height: 45px;
+}

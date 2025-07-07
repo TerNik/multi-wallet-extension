@@ -1,0 +1,80 @@
+.cardContainer {
+  color: white;
+  padding: 18px 12px;
+  font-size: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  // height: 60px;
+}
+.cardContainer:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.cardTopContainer {
+  display: flex;
+  align-items: center;
+}
+.cardBottomContainer {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+
+  .pCenter {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    align-items: center;
+    padding: 6px 12px 6px 12px;
+
+    .pImage {
+      height: 12px;
+      width: 12px;
+      margin-right: 6px;
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 19px;
+      margin: 0;
+    }
+  }
+}
+.heading {
+  word-break: break-all;
+  font-weight: 400;
+  font-size: 14px;
+}
+.subHeading {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.middleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rightSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftImage {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px;
+}
+
+.rightImage {
+  width: 14px;
+  height: 16px;
+}
+.rightText {
+  font-weight: 400;
+}

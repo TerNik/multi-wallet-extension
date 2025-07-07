@@ -1,0 +1,14 @@
+.searchInput {
+  background: transparent;
+  border: none;
+  width: 260px;
+  color: white;
+  font-weight: 400;
+  &::placeholder {
+    color: white;
+  }
+}
+
+.searchInput:disabled {
+  cursor: not-allowed;
+}

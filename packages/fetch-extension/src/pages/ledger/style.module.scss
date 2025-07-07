@@ -1,0 +1,223 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000d3d;
+  background-image: url("../../public/assets/svg/wireframe/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+
+.ledgerContainer {
+  width: 390px;
+}
+
+.confirmLedgerDialog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+
+  text-align: center;
+
+  img {
+    height: 100px;
+  }
+
+  p {
+    font-size: 20px;
+    color: white;
+
+    margin: 0;
+    padding: 30px 0 50px 0;
+  }
+
+  i {
+    color: #9092b6;
+  }
+}
+
+.buttons {
+  display: flex;
+  padding-top: 15px;
+  gap: 5px;
+}
+
+.button {
+  flex: 1;
+}
+
+.signCompleteDialog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+
+  text-align: center;
+
+  img {
+    height: 100px;
+  }
+
+  p {
+    font-size: 20px;
+    color: #32325d;
+    color: white;
+
+    margin: 0;
+    padding: 30px 0 50px 0;
+  }
+
+  .subParagraph {
+    font-size: 16px;
+    color: white;
+  }
+}
+
+.logoInnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  .icon {
+    width: 215px;
+  }
+}
+
+.instructions {
+  width: 390px;
+  margin: 0px auto;
+  height: 720px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  .backButton {
+    display: flex;
+    text-align: left;
+    padding: 0px;
+    margin-bottom: 26px;
+  }
+}
+
+.pageTitle {
+  font-size: 32px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  align-items: center;
+}
+
+.instruction {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 20px;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  .icon {
+    img {
+      filter: invert(1);
+    }
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  &.selected {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &.pass {
+    h1 {
+      color: #aaaaaa;
+    }
+
+    p {
+      color: #aaaaaa;
+    }
+  }
+
+  .inner {
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.3px;
+
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ledgerCheckbox {
+  margin-left: 15px;
+  margin-top: 6px;
+
+  &:checked {
+    accent-color: #010d3e !important;
+    background: transparent !important;
+    opacity: 1;
+    border-color: white !important;
+  }
+
+  &:not(:disabled):active {
+    ~ .ledgerCheckboxLabel {
+      &::before {
+        background-color: transparent !important;
+        border-color: white !important;
+      }
+    }
+  }
+
+  &:checked ~ .ledgerCheckboxLabel::before {
+    border-color: white !important;
+    background-color: transparent !important;
+  }
+
+  &:focus:not(:checked) ~ .ledgerCheckboxLabel {
+    &::before {
+      border-color: white !important;
+    }
+  }
+}
+
+.ledgerCheckboxLabel {
+  &::before {
+    margin-left: 15px;
+    margin-top: 5px;
+    border-radius: 0.25rem !important;
+    border: 1px solid white;
+    background: transparent !important;
+  }
+
+  &::after {
+    border: 1px solid white;
+    border-radius: 0.25rem !important;
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+}

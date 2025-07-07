@@ -1,0 +1,31 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "ES2016" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */,
+    "module": "ESNEXT" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
+    "baseUrl": "./",
+    "paths": {
+      "@new-components/*": ["src/new-components/*"],
+      "@new-layouts/*": ["src/new-layouts/*"],
+      "@components/*": ["src/components/*"],
+      "@components-v2/*": ["src/components-v2/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@layouts-v2/*": ["src/layouts-v2/*"],
+      "@graphQL/*": ["src/graphQL/*"],
+      "@chatTypes": ["src/@types/chat"],
+      "@notificationTypes": ["src/@types/notification"],
+      "@hooks/*": ["src/hooks/*"],
+      "@assets/*": ["src/public/assets/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "../../node_modules/@types",
+      "./@types"
+    ]
+  },
+  "include": ["src/**/*", "window.d.ts", "src/import-svg.d.ts"],
+  "excluded": ["src/**/*.stories.*","**/*.wasm"]
+}

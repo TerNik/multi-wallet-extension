@@ -1,0 +1,56 @@
+.emptyLayout {
+  background-color: #000d3d;
+  background-image: url("../../public/assets/svg/wireframe/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .header {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .paragraph {
+    text-align: center;
+    padding: 0 24px;
+    overflow-y: auto;
+    color: white;
+  }
+
+  .permission {
+    margin-top: 30px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 14px;
+    padding: 0;
+    width: fit-content;
+    margin: auto;
+    color: white;
+
+    li:before {
+      content: "- ";
+    }
+  }
+
+  .buttons {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .button {
+    flex: 1;
+  }
+}
